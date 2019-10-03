@@ -1,0 +1,13 @@
+star_rating,title,content_rating,genre,duration,actors_list
+9.3,Education,R,Crime,113,"[u'Salman',u'Sarukh']"
+9.2,God return,R,devatas,175,"[u'Dev',u'Anand']"
+9.1,God return:partI,R,devatas,189,"[u'Dev',u'Anand']"
+9.4,Military,PG-13,Action,152,"[u'Devel',u'pment']"
+8.7,"The Good thing happen many time",Not Rated,Central,161,"[u'Yet',u'To decide']"
+8.7,"Safe from Bad Thing",Not Rated,Drama,90,"[u'Fix',u' decide']"
+8.9,Schindler List,R,Biography,195,"[u'Will',u'wood']"
+8.8,Forest,PG-13,Drama,123,"[u'Mark',u'Hamill']"
+8.7,Interstellar,PG-13,Adventure,124,"[u'Mathew',u'Wade']"
+8.6,Professor,R,Crime,110,"[u'Postmam',u'elastic']"
+
+                   

@@ -1,4 +1,4 @@
-package com.practice
+package com.batch.core
 
 import org.apache.spark.sql.SparkSession
 

@@ -1,4 +1,4 @@
-package com.practice
+package com.batch.core
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
@@ -15,9 +15,9 @@ object SCDTwoImplementation {
       .withColumn("curr_ind", lit("Y"))
       .withColumn("md5_chk_sum",lit("MD1"))
 
-    val delta = sp.read.option("header","true").csv("testData/input/scd2/delta")
-
     import sp.implicits._
+
+    val delta = sp.read.option("header","true").csv("testData/input/scd2/delta")
     val originalMd5 = orginal.withColumn("original_non_key_concat",concat_ws("_",
     $"id",$"name",$"address",$"pin"))
       .withColumn("orginal_non_key_md5",sha2($"original_non_key_concat",256))

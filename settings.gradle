@@ -1,2 +1,4 @@
 rootProject.name = 'SparkPractice'
+include 'SparkStreaming'
+include 'SparkBatch'
 
