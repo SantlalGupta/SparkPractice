@@ -1,0 +1,17 @@
+custid,event
+101,login
+101,search
+101,select
+101,click
+101,buy
+101,NoPayment
+101,logout
+102,search
+102,select
+102,goout
+103,search
+103,select
+103,click
+103,login
+103,buy
+103,pay
