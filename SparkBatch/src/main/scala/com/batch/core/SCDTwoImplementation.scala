@@ -9,7 +9,7 @@ object SCDTwoImplementation {
 
     val sp = SparkSession.builder().master("local").appName("SCD2").getOrCreate()
 
-    val orginal = sp.read.option("header","true").csv("testData/input/scd2/orginal")
+    val orginal = sp.read.option("header","true").csv("SparkBatch/testData/input/scd2/orginal")
       .withColumn("eff_start_date", current_timestamp())
       .withColumn("eff_end_date", lit("9999-01-01 00:00:00"))
       .withColumn("curr_ind", lit("Y"))
@@ -17,7 +17,7 @@ object SCDTwoImplementation {
 
     import sp.implicits._
 
-    val delta = sp.read.option("header","true").csv("testData/input/scd2/delta")
+    val delta = sp.read.option("header","true").csv("SparkBatch/testData/input/scd2/delta")
     val originalMd5 = orginal.withColumn("original_non_key_concat",concat_ws("_",
     $"id",$"name",$"address",$"pin"))
       .withColumn("orginal_non_key_md5",sha2($"original_non_key_concat",256))

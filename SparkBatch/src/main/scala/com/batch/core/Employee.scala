@@ -7,7 +7,7 @@ object Employee {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession.builder().master("local").appName("Employee").getOrCreate()
 
-    val read = spark.read.option("header",true)/*.format("yyyy-MM-dd")*/.schema(schema).csv("testData/input/Employee")
+    val read = spark.read.option("header",true)/*.format("yyyy-MM-dd")*/.schema(schema).csv("SparkBatch/testData/input/Employee")
 
   /* converting address field from String to Array[String]
   val arra = read.map(row=> {

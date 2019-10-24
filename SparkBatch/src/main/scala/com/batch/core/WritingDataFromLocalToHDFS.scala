@@ -7,7 +7,7 @@ object WritingDataFromLocalToHDFS {
 
     val sp = SparkSession.builder().master("local").appName("test").getOrCreate()
 
-    val df = sp.read.csv("testData/input/test")
+    val df = sp.read.csv("SparkBatch/testData/input/test")
 
     df.write.csv("hdfs://localhost:9000/output")
   }
