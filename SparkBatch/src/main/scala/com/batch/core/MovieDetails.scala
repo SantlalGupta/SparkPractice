@@ -48,7 +48,7 @@ object MovieDetails {
 
   def main(args: Array[String]): Unit = {
     val spark = SparkSession.builder().master("local").appName("Movie").getOrCreate()
-
+    System.setProperty("hadoop.home.dir","C:\\Users\\Santlal\\hadoop")
     val df = spark.read.schema(schema).option("header", true).csv("SparkBatch/testData/input/Movie");
     //df.show()
     val save = df.map(row => {
