@@ -9,6 +9,15 @@ import org.apache.spark.sql.functions._
  * Here I have first group the data set and then apply pivot on the column of which rows value we want to become column for output
  * and then perform aggregation on group data(here we can use first or last function on group data but output will be same).
  *
+ * Input:
+ * custid,product,purchase_amt
+ * 101,cosmatic,1212.98
+ * 101,shop,112.12
+ * 101,shampoo,232.34
+ * 102,shop,232.12
+ * 102,shampoo,232.32
+ * 103,cosmatic,2342.23
+ *
  * +------+--------+-------+------+
  * |custid|cosmatic|shampoo|  shop|
  * +------+--------+-------+------+
